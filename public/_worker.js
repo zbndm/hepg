@@ -4720,11 +4720,11 @@ var onRequest4 = pages_template_plugin_default({ footerText: "Set from a Plugin!
 // functions/next.ts
 var onRequest5 = ({ next }) => next("/some-asset.html");
 
-// assets:D:\ONEREPO\ka6a.ga\static-assets
+// assets:/home/projects/hepg/static-assets
 var onRequest6 = ({ request, env, functionPath }) => {
   const url = new URL(request.url);
   const relativePathname = `/${url.pathname.split(functionPath)[1] || ""}`.replace(/^\/\//, "/");
-  url.pathname = "/cdn-cgi/pages-plugins/ii7FP2E5NLpW9Y1tEZ62M" + relativePathname;
+  url.pathname = "/cdn-cgi/pages-plugins/jjlx_B5ejH1CC-NOzXsmK" + relativePathname;
   request = new Request(url.toString(), request);
   return env.ASSETS.fetch(request);
 };
@@ -4743,7 +4743,7 @@ var onRequest8 = async ({ next }) => {
   return response;
 };
 
-// C:/Users/User/AppData/Local/Temp/functionsRoutes-0.38517101294733735.mjs
+// ../../../tmp/functionsRoutes-0.3957832668912724.mjs
 var routes = [
   {
     routePath: "/r2/create",
@@ -4838,7 +4838,7 @@ var routes = [
   }
 ];
 
-// C:/Users/User/AppData/Roaming/npm/node_modules/wrangler/node_modules/path-to-regexp/dist.es2015/index.js
+// ../../.turbo/npx/ddryHs/node_modules/path-to-regexp/dist.es2015/index.js
 function lexer2(str2) {
   var tokens = [];
   var i2 = 0;
@@ -5130,7 +5130,7 @@ function pathToRegexp2(path2, keys, options) {
   return stringToRegexp2(path2, keys, options);
 }
 
-// C:/Users/User/AppData/Roaming/npm/node_modules/wrangler/templates/pages-template-worker.ts
+// ../../.turbo/npx/ddryHs/node_modules/wrangler/templates/pages-template-worker.ts
 var escapeRegex2 = /[.+?^${}()|[\]\\]/g;
 function* executeRequest2(request) {
   const requestPath = new URL(request.url).pathname;
