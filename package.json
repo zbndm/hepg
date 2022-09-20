@@ -5,6 +5,7 @@
 	"sideEffects": false,
 	"main": "dist/worker.js",
 	"scripts": {
+		"build": "npx wrangler pages functions build --outfile public/_worker.js && set CLOUDFLARE_ACCOUNT_ID=d9c4a171c4a0d0a8e6f8204ae9ba0638 && npx wrangler pages publish cec",
 		"b": "npx wrangler pages functions build --outfile public/_worker.js && npx wrangler pages publish public",
 		"g": "git add . && git commit -m \"first commit\" && git push -u origin main -f",
 		"dev": "npx wrangler pages dev public --binding=NAME=VALUE --binding=OTHER_NAME=THING=WITH=EQUALS --r2=BUCKET --port 8789",
