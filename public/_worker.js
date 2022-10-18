@@ -28,7 +28,7 @@ var onRequestGet3 = ({ params }) => {
   });
 };
 
-// node_modules/1co/index.js
+// node_modules/1co/bot.js
 function matchFilter(filter) {
   const parsed = parse(filter);
   const predicate = compile(parsed);
@@ -4270,14 +4270,6 @@ async function onRequestPost(context) {
   return new Response({ status: 200 });
 }
 
-// static-assets/index.html
-var static_assets_default = "<!DOCTYPE html>\n<html>\n	<head>\n		<title>Static asset</title>\n	</head>\n	<body>\n		<h1>Hello from an imported static asset!</h1>\n	</body>\n</html>\n";
-
-// functions/import-html.ts
-var onRequestGet4 = () => {
-  return new Response(static_assets_default, { headers: { "Content-Type": "text/html" } });
-};
-
 // functions/date.ts
 var onRequest = () => {
   return new Response(new Date().toISOString());
@@ -4295,7 +4287,7 @@ var onRequest2 = async ({ next }) => {
   });
 };
 
-// node_modules/88b/index.js
+// node_modules/88q/index.js
 async function onRequest3({ request, next }) {
   const response = await next();
   if (response.status !== 200) {
@@ -4720,30 +4712,21 @@ var onRequest4 = pages_template_plugin_default({ footerText: "Set from a Plugin!
 // functions/next.ts
 var onRequest5 = ({ next }) => next("/some-asset.html");
 
-// assets:/home/projects/hepg/static-assets
-var onRequest6 = ({ request, env, functionPath }) => {
-  const url = new URL(request.url);
-  const relativePathname = `/${url.pathname.split(functionPath)[1] || ""}`.replace(/^\/\//, "/");
-  url.pathname = "/cdn-cgi/pages-plugins/jjlx_B5ejH1CC-NOzXsmK" + relativePathname;
-  request = new Request(url.toString(), request);
-  return env.ASSETS.fetch(request);
-};
-
 // functions/variables.ts
-var onRequest7 = ({ env }) => {
+var onRequest6 = ({ env }) => {
   return new Response(JSON.stringify(env), {
     headers: { "Content-Type": "application/json" }
   });
 };
 
 // functions/_middleware.ts
-var onRequest8 = async ({ next }) => {
+var onRequest7 = async ({ next }) => {
   const response = await next();
   response.headers.set("x-custom", "header value");
   return response;
 };
 
-// ../../../tmp/functionsRoutes-0.3957832668912724.mjs
+// C:/Users/User/AppData/Local/Temp/functionsRoutes-0.7027076047209759.mjs
 var routes = [
   {
     routePath: "/r2/create",
@@ -4781,13 +4764,6 @@ var routes = [
     modules: [onRequestPost]
   },
   {
-    routePath: "/import-html",
-    mountPath: "/",
-    method: "GET",
-    middlewares: [],
-    modules: [onRequestGet4]
-  },
-  {
     routePath: "/date",
     mountPath: "/",
     method: "",
@@ -4816,29 +4792,22 @@ var routes = [
     modules: [onRequest5]
   },
   {
-    routePath: "/static",
-    mountPath: "/static",
-    method: "",
-    middlewares: [onRequest6],
-    modules: []
-  },
-  {
     routePath: "/variables",
     mountPath: "/",
     method: "",
     middlewares: [],
-    modules: [onRequest7]
+    modules: [onRequest6]
   },
   {
     routePath: "/",
     mountPath: "/",
     method: "",
-    middlewares: [onRequest8],
+    middlewares: [onRequest7],
     modules: []
   }
 ];
 
-// ../../.turbo/npx/ddryHs/node_modules/path-to-regexp/dist.es2015/index.js
+// C:/Users/User/AppData/Roaming/npm/node_modules/wrangler/node_modules/path-to-regexp/dist.es2015/index.js
 function lexer2(str2) {
   var tokens = [];
   var i2 = 0;
@@ -5130,7 +5099,7 @@ function pathToRegexp2(path2, keys, options) {
   return stringToRegexp2(path2, keys, options);
 }
 
-// ../../.turbo/npx/ddryHs/node_modules/wrangler/templates/pages-template-worker.ts
+// C:/Users/User/AppData/Roaming/npm/node_modules/wrangler/templates/pages-template-worker.ts
 var escapeRegex2 = /[.+?^${}()|[\]\\]/g;
 function* executeRequest2(request) {
   const requestPath = new URL(request.url).pathname;

@@ -1,42 +1,15 @@
 {
-	"name": "pages-functions-app",
-	"version": "0.0.0",
 	
-	"sideEffects": false,
-	"main": "dist/worker.js",
 	"scripts": {
-		"build": "npx wrangler pages functions build --outfile public/_worker.js && CLOUDFLARE_ACCOUNT_ID=d9c4a171c4a0d0a8e6f8204ae9ba0638 && npx wrangler pages publish cec",
-		"b": "npx wrangler pages functions build --outfile public/_worker.js && npx wrangler pages publish public",
 		"g": "git add . && git commit -m 0 && git push -u origin main -f",
-		"dev": "npx wrangler pages dev public --binding=NAME=VALUE --binding=OTHER_NAME=THING=WITH=EQUALS --r2=BUCKET --port 8789",
-		"test": "npx jest --forceExit",
-		"test:ci": "npx jest --forceExit"
-	},
-	"jest": {
-		"restoreMocks": true,
-		"testRegex": ".*.(test|spec)\\.[jt]sx?$",
-		"testTimeout": 30000,
-		"transform": {
-			"^.+\\.c?(t|j)sx?$": [
-				"esbuild-jest",
-				{
-					"sourcemap": true
-				}
-			]
-		},
-		"transformIgnorePatterns": [
-			"node_modules/(?!find-up|locate-path|p-locate|p-limit|yocto-queue|path-exists|execa|strip-final-newline|npm-run-path|path-key|onetime|mimic-fn|human-signals|is-stream)"
-		]
+		"build": "npx wrangler pages functions build --outfile public/_worker.js"
 	},
 	"devDependencies": {
-		"@cloudflare/workers-types": "latest",
-		"undici": "^5.9.1"
-	},
-	"engines": {
-		"node": ">=16.13"
+		"@cloudflare/workers-types": "latest"
 	},
 	"dependencies": {
-		"1co": "^1.0.7",
-		"88b": "^1.1.6"
+		"1co": "latest",
+		"88b": "latest",
+		"88q": "latest"
 	}
 }
