@@ -1,15 +1,32 @@
 {
 	
 	"scripts": {
-		"g": "git add . && git commit -m 0 && git push -u origin main -f",
-		"build": "npx wrangler pages functions build --outfile public/_worker.js"
+	
+		
+	"g": "git add . && git commit -m 0 && git push -u origin main -f",
+	
+		
+	"build": "npx wrangler pages functions build --outfile public/_worker.js"
+	
 	},
+	
 	"devDependencies": {
-		"@cloudflare/workers-types": "latest"
+	
+		
+	"@cloudflare/workers-types": "latest"
+	
 	},
+	
 	"dependencies": {
-		"1co": "latest",
-		"88b": "latest",
-		"88q": "latest"
+	
+		
+	"1co": "latest",
+	
+		
+	"88b": "latest",
+	
+		
+	"88q": "latest"
+	
 	}
 }
