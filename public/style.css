@@ -1,0 +1,26 @@
+#widget li.topNode > div.dx-treeview-toggle-item-visibility {
+  display: none !important;
+}
+#widget li.topNode:has("> ul.dx-treeview-node-container-opened"){
+  font-weight: bold;
+}
+
+#widget li.topNode {
+  padding-left: 0;
+  text-transform: uppercase;
+  background: #ebecee;
+}
+#widget li.topNode > ul {
+  background: white;
+  text-transform: none;
+  font-weight: normal;
+}
+
+#widget .dx-treeview-item-without-checkbox.dx-state-focused > .dx-treeview-item {
+  background-color: #f8c47b !important;
+  color: black; 
+}
+
+#widget .dx-treeview-item-without-checkbox.dx-state-focused > .dx-treeview-item * {
+  color: black; 
+}
